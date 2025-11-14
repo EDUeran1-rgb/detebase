@@ -8,8 +8,8 @@
     $conn=mysqli_connect($host, $user, $pass, $db);
     if(isset($_POST['btn'])){
         $joketext=$_POST['joketext'];
-        $jokeanswer=$_POST['jokeanswer'];
-        $sql="INSERT INTO jokes(joketext, jokeanswer) VALUES('$joketext','$jokeanswer')";
+        $jokeanswer=$_POST['jokeanwer'];
+        $sql="INSERT INTO jokes(joketext, jokeanwer) VALUES('$joketext','$jokeanswer')";
         $result=mysqli_query($conn,$sql);
         
     }
@@ -33,17 +33,17 @@
                     <textarea name="joketext"></textarea>
                 </label>
                 <label>Svaret på skämtet
-                    <input type="text" name="jokeanswer">
+                    <input type="text" name="jokeanwer">
                 </label>
                 <input type="submit" value="Lägg in" name="btn">
             </form>
         </section>
         <section>
             <?php while($row=mysqli_fetch_assoc($result)): ?>
-                <details><summary><?=$row['joketext']?></summary><?=$row['joketext']?></details>
+                <details><summary><?=$row['joketext']?></summary><?=$row['jokeanwer']?></details>
             <?php endwhile ?>
         </section>
     </main>
-    <footer>&copy; all dads forever 2025</footer>
+    <footer>&copy; Sniperking 2025</footer>
 </body>
 </html>
