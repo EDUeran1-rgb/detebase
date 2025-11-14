@@ -44,6 +44,7 @@
             <?php endwhile ?>
         </section>
     </main>
-    <footer>&copy; Sniperking 2025</footer>
+    <div class="sak"></div>
+    <footer>&copy; Sniperking 2025 <div class="sak"></div> </footer>
 </body>
 </html>
